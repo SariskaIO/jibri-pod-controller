@@ -400,6 +400,7 @@ dependencies = [
  "kube",
  "kube-leader-election",
  "once_cell",
+ "openssl",
  "serde",
  "serde_json",
  "tokio",
@@ -434,9 +435,9 @@ dependencies = [
 
 [[package]]
 name = "kube"
-version = "0.63.2"
+version = "0.64.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "75e877325e5540a3041b519bd7ee27a858691f9f816cf533d652cbb33cbfea45"
+checksum = "84dcc2f8ca3f2427a72acc31fa9538159f6b33a97002e315a3fcd5323cf51a2b"
 dependencies = [
  "k8s-openapi",
  "kube-client",
@@ -445,9 +446,9 @@ dependencies = [
 
 [[package]]
 name = "kube-client"
-version = "0.63.2"
+version = "0.64.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bb8e1a36f17c63e263ba0ffa2c0658de315c75decad983d83aaeafeda578cc78"
+checksum = "8957106140aa24a76de3f7d005966f381b30a4cd6a9c003b3bba6828e9617535"
 dependencies = [
  "base64",
  "bytes",
@@ -480,9 +481,9 @@ dependencies = [
 
 [[package]]
 name = "kube-core"
-version = "0.63.2"
+version = "0.64.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a91e572d244436fbc0d0b5a4829d96b9d623e08eb6b5d1e80418c1fab10b162a"
+checksum = "2ec73e7d8e937dd055d962af06e635e262fdb6ed341c36ecf659d4fece0a8005"
 dependencies = [
  "chrono",
  "form_urlencoded",
@@ -496,9 +497,9 @@ dependencies = [
 
 [[package]]
 name = "kube-leader-election"
-version = "0.3.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "83c24ee0eca46b0b6e5935bb261888f40fbda7c97597023e85c2b4bd1f57dcf5"
+checksum = "69b2dab06069e263e961c677ee7ff84303d4f18c40daea6091c2a34335fcf690"
 dependencies = [
  "chrono",
  "k8s-openapi",
@@ -671,6 +672,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ff011a302c396a5197692431fc1948019154afc178baf7d8e37367442a4601cf"
 
 [[package]]
+name = "openssl-src"
+version = "300.0.4+3.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "216e1c6b4549e24182b9d7aa268f645414888a69daf44c7b2d8118da8e7b23e7"
+dependencies = [
+ "cc",
+]
+
+[[package]]
 name = "openssl-sys"
 version = "0.9.71"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -679,6 +689,7 @@ dependencies = [
  "autocfg",
  "cc",
  "libc",
+ "openssl-src",
  "pkg-config",
  "vcpkg",
 ]
@@ -719,13 +730,11 @@ dependencies = [
 
 [[package]]
 name = "pem"
-version = "0.8.3"
+version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fd56cbd21fea48d0c440b41cd69c589faacade08c992d9a54e471b79d0fd13eb"
+checksum = "e9a3b09a20e374558580a4914d3b7d89bd61b954a5a5e1dcbea98753addb1947"
 dependencies = [
  "base64",
- "once_cell",
- "regex",
 ]
 
 [[package]]
